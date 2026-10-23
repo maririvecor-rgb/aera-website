@@ -29,6 +29,8 @@ Después visita `http://localhost:8000`.
 
 El repositorio no incluye una fotografía submarina de tortugas. La portada usa una fotografía de trabajo de campo con tortuga marina disponible en los materiales. No se ha creado ni sustituido ningún logotipo o render del dispositivo. La página del proyecto usa el clip proporcionado `assets/enviroment/clips/toma08_11_v2.mp4`, con un fotograma del propio video como imagen previa.
 
+La página de inicio incluye el video promocional `assets/enviroment/AERA_promo_v1.mp4`, con reproducción manual y un fotograma del propio video como portada. El bloque aclara que el prototipo sigue en desarrollo.
+
 AERA se presenta en la página del proyecto como un producto que surge de Cada aleta cuenta.
 
 El sitio describe sensores ambientales, GPS y registro de datos como componentes contemplados en el proyecto. Su implementación y validación siguen en desarrollo; el diagrama de la página del dispositivo es conceptual.
