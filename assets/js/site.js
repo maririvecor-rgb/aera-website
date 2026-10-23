@@ -17,3 +17,13 @@ if (menuButton && siteNav) {
     }
   });
 }
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+document.querySelectorAll('.project-video').forEach((video) => {
+  if (prefersReducedMotion.matches) {
+    video.pause();
+    video.removeAttribute('autoplay');
+    video.removeAttribute('loop');
+    video.controls = true;
+  }
+});
