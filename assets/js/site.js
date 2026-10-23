@@ -32,14 +32,14 @@ const promoVideo = document.querySelector('.promo-video');
 if (promoVideo && !prefersReducedMotion.matches && 'IntersectionObserver' in window) {
   const promoObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.intersectionRatio >= 0.35) {
+      if (entry.intersectionRatio >= 0.15) {
         promoVideo.muted = true;
         promoVideo.play().catch(() => {});
       } else {
         promoVideo.pause();
       }
     });
-  }, { threshold: [0, 0.35] });
+  }, { threshold: [0, 0.15] });
 
   promoObserver.observe(promoVideo);
 }
