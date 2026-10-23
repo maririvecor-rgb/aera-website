@@ -27,3 +27,19 @@ document.querySelectorAll('.project-video').forEach((video) => {
     video.controls = true;
   }
 });
+
+const promoVideo = document.querySelector('.promo-video');
+if (promoVideo && !prefersReducedMotion.matches && 'IntersectionObserver' in window) {
+  const promoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio >= 0.35) {
+        promoVideo.muted = true;
+        promoVideo.play().catch(() => {});
+      } else {
+        promoVideo.pause();
+      }
+    });
+  }, { threshold: [0, 0.35] });
+
+  promoObserver.observe(promoVideo);
+}
